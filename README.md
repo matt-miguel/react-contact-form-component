@@ -47,7 +47,7 @@ This form uses the native Constraint Validation API. By taking advantage of the 
 ## Getting Started
 
 ```bash
-git clone https://github.com/your-username/react-contact-form-component
+git clone https://github.com/MattJM1007/react-contact-form-component
 cd react-contact-form-component
 npm install
 npm run dev
