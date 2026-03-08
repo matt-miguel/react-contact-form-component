@@ -43,8 +43,6 @@ function ContactUsForm() {
     const hasErrors = Object.values(newErrors).includes(true);
 
     if (!hasErrors) {
-      console.log("success!");
-
       e.target.reset();
       setFormSubmit(true);
 
@@ -73,7 +71,7 @@ function ContactUsForm() {
 
         <div className="flow flow--lg grid-2-col">
           <FormGroup isValid={error.fName} errorMsg="This field is required" inputId="fName">
-            <label htmlFor="fName">First Name</label>
+            <label htmlFor="fName">First Name</label> 
             <input type="text" name="fName" id="fName" aria-describedby="fName-error" aria-invalid={error.fName} required onBlur={checkError} onInput={clearError} />
           </FormGroup>
 

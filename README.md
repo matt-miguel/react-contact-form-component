@@ -1,62 +1,70 @@
-# Frontend Mentor - Contact form solution
+# React Contact Form Component
 
-This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+A customizable contact form component built with React with built-in error handling.
 
-## Table of contents
+![App Screenshot](./screenshot.png)
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-- [Author](#author)
+[Live Demo](https://mattjm1007.github.io/react-contact-form-component/) · [View Code](https://github.com/MattJM1007/react-contact-form-component)
+
+---
 
 ## Overview
 
-### The challenge
+A contact form with multiple inputs, including name, email, radio selectors, and textarea. Errors are shown on blur and cleared on input to provide instant feedback without being intrusive and disrupting the user's flow. Success submissions display success toast notification.
 
-Users should be able to:
+---
 
-- Complete the form and see a success toast message upon successful submission
-- Receive form validation messages if:
-  - A required field has been missed
-  - The email address is not formatted correctly
-- Complete the form only using their keyboard
-- Have inputs, error messages, and the success message announced on their screen reader
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+## Features
 
-### Screenshot
+- Success toast notification upon successful submission
+- Each field is validated as the user moves throughout the form
+- Errors are cleared as soon as the user starts typing
+- Built-in accessibility with aria-live, aria-invalid, aria-describedby
+- Responsive design (mobile first)
 
-![](./screenshot.png)
+---
 
-### Links
+## Technical Highlights
 
-- Solution URL: [Click me](https://github.com/MattJM1007/react-contact-form-component)
-- Live Site URL: [Clicky Clicky](https://mattjm1007.github.io/react-contact-form-component/)
+**Custom Form Group Component**
 
-## My process
+This form uses a custom Form Group component. Rather than manually adding error spans next to each input, the FormGroup component accepts any input or textarea as children and handles displaying errors automatically via props.
 
-### Built with
+**Error Handling with Constraint Validation API**
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
+This form uses the native Constraint Validation API. By taking advantage of the native validation in browsers, input errors can be checked easily in one line of code and stored in a state variable to dynamically provide error messages in real time to the user as they fill out the form.
 
-### What I learned
+---
 
-This was my first project after learning react. Learned how to use components to display and conditionally render the error message. Also learned one way to apply an animation in css so that it animates the toast in and out.
+## Tech Stack
 
-### Continued development
+- React 19 + Vite
+- CSS (Grid, Flexbox, custom properties, mobile-first)
+- Constraint Validation API — used for native input error handling
 
-I want to build bigger react apps with multiple components and keep learning different hooks.
+---
 
-## Author
+## Getting Started
 
-- Frontend Mentor - [@MattJM1007](https://www.frontendmentor.io/profile/MattJM1007)
+```bash
+git clone https://github.com/your-username/react-contact-form-component
+cd react-contact-form-component
+npm install
+npm run dev
+```
+
+---
+
+## Challenges & What I Learned
+
+**Setting up the Form Group**
+
+My initial idea for the form group was to put the inputs inside the FormGroup component and just pass the input type as a prop. But I quickly realized that I would then not be able to use textarea or multiple inputs in one form group. This taught me to design components around flexibility. By wrapping the children instead of owning it, the component became more composable and reusable.
+
+---
+
+## What I'd Improve
+
+**Error handling in the Form Group Component**
+
+I would move the error handling into the FormGroup component so that all of the validation and error display is kept in one place. This would make the component more maintainable and self-contained.
