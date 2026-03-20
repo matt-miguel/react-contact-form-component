@@ -4,7 +4,7 @@ A customizable contact form component built with React with built-in error handl
 
 ![App Screenshot](./screenshot.png)
 
-[Live Demo](https://mattjm1007.github.io/react-contact-form-component/) · [View Code](https://github.com/MattJM1007/react-contact-form-component)
+[Live Demo](https://matt-miguel.github.io/react-contact-form-component/) · [View Code](https://github.com/matt-miguel/react-contact-form-component)
 
 ---
 
@@ -47,7 +47,7 @@ This form uses the native Constraint Validation API. By taking advantage of the 
 ## Getting Started
 
 ```bash
-git clone https://github.com/MattJM1007/react-contact-form-component
+git clone https://github.com/matt-miguel/react-contact-form-component
 cd react-contact-form-component
 npm install
 npm run dev
